@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #032742;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Plane Container */
+
+.planeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.planeNose {
+    background-color: #B2D5EF;
+    width: 165px;
+    height: 260.5px;
+    border-top-left-radius: 200%;
+    border-top-right-radius: 200%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: flex-end;
+}
+
+/* First class */
+
+.firstClass {
+    padding: 5px;
+}
+
+.firstClassRow {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+/* Business class */
+
+.businessClass {
+    padding: 5px;
+}
+
+.businessClassRow {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px
+}
+
+.aisle {
+    display: flex;
+}
+
+/* Economy class */
+
+.middleSeat, .economyClassRow, .economyClass {
+    display: flex;
+}
+
+.economyClass {
+    flex-direction: column;
+}
+
+.economyClassRow {
+    justify-content: space-around;
+    margin-top: 5px
+}
+
+/* Toilet section */
+
+.toilet {
+    width: 165px;
+    height: 32px;
+    background-color: #3593dc;
+}
+
+/* Plane Torso */
+
+.planeTorso {
+    height: 256px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.leftWing {
+    position: relative;
+    left: 16px;
+    width: 0; 
+    height: 0; 
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid #B2D5EF;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.planeBody {
+    width: 165px;
+    height: 263.25px;
+    margin: 0;
+    background-color: #B2D5EF;
+}
+
+.rightWing {
+    position: relative;
+    right: 16px;
+    margin: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid #B2D5EF;
+    transform: rotate(135deg);
+    z-index: -1;
+}
+
+/* Plane tail */
+
+.bottom {
+    width: 165px;
+    height: 105.5px;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: #B2D5EF;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.tail {
+    height: 60px;
+    border: 3px solid #133b5a;
+}
+
+/* Container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+#ticketCategories {
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* Showcase */
+
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    padding:  15px;
+    margin: 0 5vw;
+    list-style-type: none;
+    background-color: #133b5a;
+    border-radius: 10px;
+}
+
+.showcase li {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase li small {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+
+}
+
+/* Seat */
+
+.seat {
+    width: 16px;
+    height: 13.5px;
+    margin: 0.75px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #777
+}
+
+.seat.occupied {
+    background-color: #416683;
+}
+
+.seat.selected {
+    background-color: wheat;
+}
+
+.seat:not(.occupied):hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.showcase .seat:not(.occupied):hover, span.unselected .seat:hover {
+    transform: scale(1);
+    cursor: default;
+}
+
+/* span */
+
+.unselected {
+    background-color: rgba(0, 0, 0, .6);
+    opacity: .3;
+}
+
+.firstClass:hover {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+} 
+
+/* Register */
+
+#register {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    margin-top: 2rem;
+    height: 12.75vh;
+    width: 555px;
+}
+
+div#selectedTicketShowcase {
+    margin: 10px;
+    line-height: 5px;
+    width: 199px;
+}
+
+#firstTicket, #businessTicket, #economyTicket {
+    display: none;
+    color: #5ecbf7;
+}
+
+#totalCost {
+    color: #5ecbf7
+}
+
+@media  (max-width: 1000px) {
+    div#register {
+        width: 50vw;
+        justify-content: center;
+    } 
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+    div.container {
+        margin-top: 8rem;
+    }
+    div#register {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    div#register p:nth-of-type(1) {
+        margin-bottom: 10px;
+    } 
+    div#selectedTicketShowcase {
+        height: 5rem;
+        margin-top: 0;
+    }
+} 
+
+

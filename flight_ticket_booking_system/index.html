@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight ticket booking system</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="planeContainer">
+        <div class="planeNose">
+            <span class="firstClass">
+                <div class="firstClassRow">
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                </div>
+                <div class="firstClassRow">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="firstClassRow">
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                </div>
+            </span>
+            
+            <span class="businessClass">
+                <div class="businessClassRow">
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                    </div>
+                </div>
+                <div class="businessClassRow">
+                    <div class="aisle">
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                    </div>
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                    </div>
+                </div>
+                <div class="businessClassRow">
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+                <div class="businessClassRow">
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="aisle">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+                <div class="businessClassRow">
+                    <div class="aisle">
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="aisle">
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                    </div>
+                </div>
+            </span>            
+        </div>
+        <div class="toilet">
+        </div>
+        <div class="planeTorso">
+            <div class="leftWing"></div>
+            <div class="planeBody" id="planeBody">
+                <span class="economyClass">
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat occupied"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                            <div class="seat occupied"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat occupied"></div>
+                            <div class="seat occupied"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div> 
+                    </div>
+                    <div class="economyClassRow">
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+                        <div class="middleSeat">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>        
+                        <div class="aisle">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div> 
+                    </div>
+                    
+                </span>    
+            </div>
+            <div class="rightWing"></div>
+        </div>
+        <div class="toilet">
+        </div>
+        <div class="bottom">
+            <div class="tail"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="ticketCategories">
+            <label>Select a ticket: </label>
+            <select id="tickets">
+                <option value="300">Economy Class ($300)</option>
+                <option value="1000">Business Class ($1000)</option>
+                <option value="3000">First Class ($3000)</option>
+            </select>
+        </div>
+        <ul class="showcase">
+            <li>
+                <div class="seat"></div>
+                <small>N/A</small>
+            </li>
+            <li>
+                <div class="seat selected"></div>
+                <small>Selected</small>
+            </li>
+            <li>
+                <div class="seat occupied"></div>
+                <small>Occupied</small>
+            </li>
+        </ul>
+        <div id="register">
+            <p>You have selected</p> 
+            <div id="selectedTicketShowcase">
+                <p id="economyTicket">0 economy flight ticket</p>
+                <p id="businessTicket">0 business flight ticket</p>
+                <p id="firstTicket">0 first flight ticket</p>
+            </div>
+            <p> for a price of <span id="totalCost">$0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
