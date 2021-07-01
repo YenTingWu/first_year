@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validator</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <div id='redisterBox'>
+        <h3>Register With Us</h3>
+        <form>
+            <div id="top_info_box" class="info_box">
+                <label class="input_title" for="account">Username</label><br>
+                <input 
+                    id="userName" 
+                    class="user_information" 
+                    type="text" 
+                    placeholder="Enter username" 
+                    />
+                <small>error</small>
+
+            </div>
+            <div class="info_box">
+                <label class="input_title" for="email">Email</label><br>
+                <input 
+                    id="email" 
+                    class="user_information" 
+                    type="email" 
+                    placeholder="Enter email" 
+                    />
+                <small>error</small>
+            </div>  
+            <div class="info_box">      
+                <label class="input_title" for="password">Password</label><br>
+                <input 
+                    id="password" 
+                    class="user_information" 
+                    type="password" 
+                    placeholder="Enter password" 
+                    />
+                <small>error</small>
+            </div>
+            <div class="info_box">
+                <label class="input_title" for="email">Confirm Password</label><br>
+                <input 
+                    id="confirm_password" 
+                    class="user_information" 
+                    type="password" 
+                    placeholder="Enter email again"
+                    />
+                <small>error</small>
+            </div>
+            <div class="info_box">
+                <button id="button" type="submit">Submit</button>
+            </div>      
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

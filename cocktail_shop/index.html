@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cocktails Cart</title>
+</head>
+<body>
+    
+    <nav id="main-nav">
+        <h1 id="logo">Cocktail shop</h1>
+        <div class="searchArea">
+            <input type="text" class="search" id="search" placeholder="Cocktail name">
+            <button type="submit" id="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+            <div id="searchBtn-note">search</div>
+            <button id="randomBtn">
+                <i class="fas fa-random"></i>
+            </button>
+            <div id="randomBtn-note">random</div>
+        </div>
+        <div id="cart">
+            <i class="fas fa-cart-arrow-down"></i>
+            <p id="total-cart-amounts"></p>
+        </div>
+        <div id="cartContainer">
+        </div>
+    </nav>
+    <div id="container">
+        <div id="result-heading"></div>
+        <div id="cocktailsEl"></div>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+    div#redisterBox {
+    justify-content: center;
+    border-radius: 2%;
+    border: 1px outset grey;
+    width: 380px;
+    height: 565px;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+ h3 {
+    margin-top: 30px; 
+    margin-bottom: 0;  
+    font-size: x-large;
+    text-align: center;
+}
+
+div#top_info_box {
+    margin-top: 1.2rem;
+}
+
+div.info_box {
+    margin: auto;
+    margin-top: .3rem;
+    padding: 0;
+    width: 80%;
+
+}
+
+label {
+    font-size: 1.3em;
+    opacity: .5;
+}
+
+input.user_information {
+    width: 90%;
+    height: 80%;
+    margin-top: 7px;
+    padding: 10px;
+    line-height: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+small {
+    visibility: hidden;
+}
+
+
+button#button {
+    width: 98%;
+    height: 35px;
+    border-radius: 2%;
+    color: honeydew;
+    background-color: lightseagreen;
+    font-size: 15px;
+}  
+button:hover {
+    transform: scale(1.05);
+}
+
+.input_green {
+    border-color: rgb(4, 196, 4);
+}
+
+.input_red {
+    border-color: #e74c3c;
+}

@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* html {
+    background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* html::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .3)
+}
+
+html * {
+    z-index: 1;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+    min-height: 100vh;
+    margin: 0;  
+}
+
+/* Nav */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-shadow: .5px .5px 1.5px 1.5px grey ;
+    padding: 10px;
+    background-color: rgba(54, 140, 206, 0.5);
+    opacity: 1;
+    transition: .3s all ease-in-out
+}
+
+nav.dark {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: rgba(54, 140, 206);
+}
+
+nav.dark h1 {
+    color: #fff;
+}
+
+nav > div {
+    transform: translate(-10%);
+}
+
+/* Logo */
+
+nav h1 {
+    margin: 15px 10px;
+    font-weight: 900;
+    transition: all .2s ease
+}
+
+nav h1::selection, .cocktail .drink-info h3::selection, .add-to-cart h5::selection {
+    color: none;
+    background-color: none;
+}
+
+nav h1:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* search box */
+
+.searchArea {
+    display: flex;
+    height: 35px;
+    width: 600px;
+    position: relative;
+    left: 18px;
+} 
+
+.searchArea input, .searchArea button {
+    border: 1px solid black;
+    outline: none;
+    padding: 8px 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 0;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    width: 500px;
+}
+
+#searchBtn {
+    border-left: 0;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#searchBtn-note, #randomBtn-note {
+    position: absolute;
+    right: 57px;
+    top: 40px;
+    opacity: 1;
+    border-radius: 10px;
+    padding: 2px 7px;
+    background-color: grey;
+    color: #fff;
+    opacity: 0;
+    transition: .2s opacity ease-in;
+}
+
+#randomBtn-note {
+    right: 0px;
+}
+
+#searchBtn-note.popupNote, 
+#randomBtn-note.popupNote {
+    opacity: 1;
+}
+
+.searchArea button:hover {
+    cursor: pointer;
+}
+
+.searchArea button:active {
+    transform: scale(.95);
+}
+
+#randomBtn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Cart */
+
+#cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-right: 1.7rem;
+    transition: .1s background-color ease-out;
+    padding: 4px 8px 4px 4px;
+}
+
+#cart p {
+    position: absolute;
+    left: 1px;
+    padding: 2px 5px;
+    margin: 5px 30px 0;
+    border-radius: 100%;
+    background-color: #FFE800;
+    font-size: 14px;
+    display: none;
+}
+
+#cart:active {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+#cartContainer {
+    position: absolute;
+    text-align: center;
+    width: 0;
+    height: 0;
+    top: 50px;
+    right: 15px;
+    opacity: 0;
+    display: hidden;
+    transition: .3s all ease-in-out;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 17%;
+    border-bottom: 1px solid black;
+    margin: 0;
+}
+
+#cartContainer.popupCartContainer {
+    display: block;
+    position: absolute;
+    background-color: #dedede;
+    top: 100px;
+    right: 10px;
+    box-shadow: 0px 0px 10px 1px cadetblue;
+    border-radius: 5px;
+    width: 400px;
+    height: 450px;
+    opacity: 1;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.cart-item img, .checkout-item img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Cart counting area */
+
+.cart-counting-area {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cart-counting-area input[type="text"] {
+    width: 30px;
+    text-align: center;
+    outline: none;
+    font-size: 14px;
+    margin: 0 3px;
+}
+
+.cart-counting-area button {
+    text-align: center;
+    width: 23px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: transform .1s ease-in-out
+}
+
+.cart-counting-area button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.cart-counting-area button:active {
+    transform: scale(0.8);
+}
+
+#register {
+    position: relative;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+    height: 17%;
+    margin: 0;
+}
+
+#register button {
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    box-shadow: 1px 1px px #000;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 8px;
+    font-size: 10;
+    cursor: pointer;
+}
+
+/* Container */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+#container p {
+    text-align: center;
+}
+
+#result-heading {
+    text-align: center;
+    font-size: 28px;
+    margin: 5rem 0 0 0;
+}
+
+#result-heading span {
+    color: rgb(240, 169, 57)
+}
+
+#cocktailsEl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+    width: 900px;
+    max-width: 100%;
+}
+.cocktail {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.cocktail img {
+    width: 200px;
+    height: 200px;
+}
+
+.cocktail .drink-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.cocktail:hover .drink-info {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    transition: all .3s;
+}
+
+.add-to-cart h5 {
+    margin: 0;
+}
+
+
+
+.add-to-cart i {
+    margin: 1px 0 0 0;
+}
+
+.cocktail .drink-info .add-to-cart:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: white;
+}
+
+/* single-page style */
+
+#single-cocktail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#single-cocktail-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 1px 5px 7px rgba(0, 0, 0, .3);
+}
+
+#single-page-ingredients {
+    display: flex;
+    padding: 0;
+}
+
+#single-page-ingredients li {
+    list-style-type: none;
+    border: 1px solid bisque;
+}
+
+#single-page-ingredients li:not(:first-child) {
+    margin-left: 5px;
+}
+
+.checkout-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+@media (max-width: 950px) {
+    .searchArea {
+        width: 500px;
+    }
+
+    #cocktailsEl {
+        grid-template-columns: repeat(3, 1fr)!important;
+        width: 700px;
+    }
+}
+
+@media (max-width: 830px) {
+    .searchArea {
+        width: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    #cocktailsEl {
+        grid-template-columns: 1fr !important;
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .searchArea {
+        width: 50px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #single-cocktail {
+        width: 100%;
+    }
+}
