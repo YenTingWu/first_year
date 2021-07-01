@@ -1,0 +1,29 @@
+.blog_navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: inherit;
+    width: 100%;
+
+    .blog_inline_navigation {
+        width: 73%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .blog_navigation {
+       .blog_inline_navigation {
+           width: 100%;
+       } 
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .blog_navigation {
+       .blog_inline_navigation {
+           display: none;
+       } 
+    }
+}

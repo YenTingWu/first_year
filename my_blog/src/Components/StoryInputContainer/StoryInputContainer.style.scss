@@ -1,0 +1,21 @@
+.story_input_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 3px 5px;
+    width: 100%;
+
+    &.category {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .story_input_container {
+        &.category {
+            margin-left: 0px;
+        }
+    }
+}

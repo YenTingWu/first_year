@@ -1,0 +1,14 @@
+.blogpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    .occupation {
+        min-height: 90%; 
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

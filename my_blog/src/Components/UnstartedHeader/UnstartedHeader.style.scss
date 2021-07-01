@@ -1,0 +1,19 @@
+.my_intro {
+    width: 600px;
+    height: 100vh;
+    z-index: 5;
+
+    .start_btn {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #deeded;
+        background-color: #91662f;
+        outline: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

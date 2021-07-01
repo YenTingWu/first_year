@@ -1,0 +1,50 @@
+.CustomLogo {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    
+    .logo_img{
+        width: 50px;
+        height: 50px;
+        border: 3px #555 solid;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    .write_your_story {
+        margin: 0;
+        font-size: 1rem;    
+        color: #555;
+        cursor: pointer;
+        min-width: 156.68px;
+        background-color: inherit;
+    }
+
+    // .logo_my_name {
+    //     margin: 0;
+    //     font-size: 2.2rem;
+    //     font-family: 'Yellowtail', cursive;
+    //     color: #555;
+    //     min-width: 156.68px;
+    //     cursor: default;
+
+    //     &::selection {
+    //         background-color: transparent;
+    //     }
+    // }
+}    
+
+@media screen and (max-width: 769px) {
+    .CustomLogo {
+        justify-content: center;
+        width: 157px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .CustomLogo {
+        .logo_img {
+            display: none;
+        }
+    }
+}

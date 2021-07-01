@@ -1,0 +1,20 @@
+@import '../../variable.styles.scss';
+
+.connecting_line {
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px double $blog-category-hover-bg-color;
+    z-index: 1;
+    transform-origin: 1px 0px;
+}
+
+@media screen and (max-width: 765px) {
+    .connecting_line {
+        display: none;
+    }
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+.header {
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+    background-color: rgba(244, 244, 244, .4);
+
+    &.started {
+    height: 76px;
+    // box-shadow: 0px 0px 1px #556556;       
+
+        .my_profile_img {
+            width: 50px;
+            height: 50px;
+            border: 3px black solid;
+            margin: 0;
+        }
+        .my_name {
+            transform: translateX(55px);
+            margin: 0 auto 5px;
+        }
+    }
+
+    .my_name {
+        margin: 10px;
+        font-size: 3rem;
+        font-family: 'Yellowtail', cursive;
+        cursor: default;
+
+        &::selection {
+            background-color: transparent;
+        }
+    }
+
+    .my_profile_img {
+        width: 200px;
+        height: 200px;
+        margin-top: 35px;
+        border-radius: 50%;
+        border: 10px black solid;
+    }
+}
+

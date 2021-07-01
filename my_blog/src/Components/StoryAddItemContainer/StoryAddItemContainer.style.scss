@@ -1,0 +1,28 @@
+.story_page_chapter_input {
+    padding: 5px 8px;
+    margin: 8px 12px;
+    height: 42px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+
+    &::placeholder {
+        color: #dadada;
+        font-weight: 800;
+        font-size: 17px;
+    }
+}
+
+.story_page_chapter_addBtn {
+    display: block;
+    padding: 2px;
+    font-size: 16px;
+    margin: 8px 12px 8px 0;
+    min-width: 42px;
+    min-height: 42px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

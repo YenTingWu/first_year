@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  min-height: 100%;
+  height: 100vh;
+  max-height: 100%;
+  position: relative;
+  transition: .3s ease background-color;
+ 
+
+  .app_main_section_backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    background-position: 50% 14%;
+    z-index: -100;
+  }
+
+  .fixed {
+    position: fixed;
+  } 
+
+  &.scroll_down {
+    height: 100%;
+    background-image: none;
+    background-color: #fcfcfc;
+  }
+}

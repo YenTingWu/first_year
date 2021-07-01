@@ -1,0 +1,18 @@
+.story_page_controller_sections {
+    display: grid;
+    grid-row-gap: 10%;
+    grid-template-columns: 4fr 3fr;
+}
+
+@media screen and (max-width: 800px) {
+    .story_page_controller_sections {
+        width: 60%;
+        grid-template-columns: 1fr ;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .story_page_controller_sections {
+        width: 80%;
+    }
+}

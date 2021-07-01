@@ -1,0 +1,116 @@
+@mixin hint {
+    &:empty:not(:focus):before{
+        content:attr(data-ph);
+        padding-left: 2px;
+        color: #dedede;
+    }
+}
+
+.story_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+
+    .story_page_article { 
+        position: relative;
+
+        
+
+        .story_textarea {
+            width: 800px;
+            margin: 30px auto;
+            text-align: start;
+            min-height: 700px;
+            font-weight: 100;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            background-color: inherit;
+            padding: 20px;
+            line-height: 1.65;
+            letter-spacing: .2px;
+            outline: none;
+    
+            .story_textarea_title {
+                margin: 30px auto 30px 0;
+                font-size: 2.5rem;
+                font-weight: 900;
+                width: 700px;
+                @include hint();
+            }
+    
+            .story_textarea_description {
+                font-size: 1.75rem;
+                font-weight: 600;
+                @include hint();
+            }
+    
+            .story_textarea_content {
+                margin-top: 60px;
+            }
+            .story_textarea_p {
+                font-weight: 500;
+                font-size: 1.43rem;
+                line-height: 1.65;
+                letter-spacing: .2px;
+                @include hint();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .story_page {
+        .story_page_article { 
+            width: 100%;
+            .story_textarea {
+                width: 100%;
+
+                .story_textarea_title {
+                    margin: 30px auto 30px 0;
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    width: 90%;
+                    @include hint();
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .story_page {
+        .story_page_article { 
+            width: 100%;
+            .story_textarea {
+                width: 100%;
+
+                .story_textarea_title {
+                    margin: 30px auto 30px 0;
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    width: 90%;
+                    @include hint();
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .story_page {
+        .story_page_article { 
+            .story_textarea {
+                font-size: 1.12rem;
+
+                .story_textarea_title {
+                    margin: 30px auto 30px 0;
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    width: 90%;
+                    @include hint();
+                }
+            }
+        }
+    }
+}

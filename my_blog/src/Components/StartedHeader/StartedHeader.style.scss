@@ -1,0 +1,70 @@
+@import '../../variable.styles.scss';
+
+.started_header {
+    width: 1008px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+
+    .started_header_nav_right {
+        width: 35%;
+        min-width: 300px;
+        
+        .started_header_signin_btn {
+            width: 250px;
+            min-height: 50px;
+            padding: 11px 40px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 900;
+            outline: none;
+            letter-spacing: 2px;
+            cursor: pointer;
+            background-color: $base-color;
+            color: white;
+    
+            &:hover {
+                border: 2px solid $base-color;
+                background-color: #fff;
+                color: $base-color;
+            }
+        }
+    }
+
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    .started_header {
+        width: 90%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .started_header {
+        width: 100%;
+        padding: 0;
+        .started_header_nav_right {
+            min-width: 0;
+            display: flex;
+            justify-content: flex-end;
+
+            .started_header_signin_btn {
+                width: 90px;
+                min-height: 76px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 11px 0;
+                border: none;
+                border-radius: 0px;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

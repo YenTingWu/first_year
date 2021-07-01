@@ -1,0 +1,111 @@
+@import '../BlogNavigationCategoriy/BlogNavigationCategory.style.scss';
+
+@mixin drop_down_list_item_basic {
+    text-align: start;
+    color: black;
+    &:hover {
+        background-color: $blog_navigation_categories_hover_backgroundcolor;
+    }
+}
+
+.responsive_drop_down {
+    position: absolute;
+    top: -90px;
+    left: 35px;
+    display: none;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    .responsive_drop_down_list {
+        max-height: 0;
+        list-style-type: none;
+        background-color: rgba(255, 255, 255, .9);
+        overflow: hidden;
+        padding: 0 15px;
+        transition: max-height .2s ease-in, padding .2s ease;
+
+        .dropdown_blog_link {
+            &:hover {
+                ~.responsive_drop_down_list_blog_dropdown {
+                    max-height: 500px;
+                }
+            } 
+        }
+
+        .responsive_drop_down_list_item {
+            padding: 8px 0 8px 10px;
+            @include drop_down_list_item_basic();
+            
+        }
+
+        .responsive_drop_down_list_blog_dropdown {
+            list-style-type: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: .8s max-height;
+
+
+            &:hover {
+                max-height: 500px;
+            }
+
+            .responsive_drop_down_blog_item {
+                @include drop_down_list_item_basic();
+                padding: 6px 10px;
+                
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 875px) {
+
+    .responsive_drop_down {
+        display: block;
+        flex-direction: column;
+        .responsive_drop_down_icon {
+            width: 75px;
+            height: 35px;
+            overflow: hidden;
+
+            .responsive_drop_down_icon_image {
+                transform: translateY(-50%);
+                transition: .2s ease transform;
+            }
+        }
+
+        &.drop {
+            .responsive_drop_down_icon {
+                .responsive_drop_down_icon_image {
+                    transform: translateY(0);
+                }
+            }
+            .responsive_drop_down_list {
+                max-height: 500px;
+                padding: 10px 15px;
+
+                .responsive_drop_down_list_item {
+                    height: auto;
+                    padding: 8px 0 8px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .responsive_drop_down {
+        left: 0px;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    .responsive_drop_down {
+        left: -10px;
+        top: -100px;
+    }
+}

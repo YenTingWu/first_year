@@ -1,0 +1,93 @@
+.blog_all_items_overview {
+    margin: 80px;
+    padding: 30px 50px;
+    width: calc(79% + 100px);
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 8.5fr 3fr;
+    border-radius: 10px;
+    position: relative;
+    
+    .blog_all_items_overview_container {
+        width: 100%;
+    }
+
+    .blog_all_items_overview_right_section {
+        position: relative;
+
+        .blog_all_items_overview_right_section_articles_amount_container {
+            display: flex;
+            flex-direction: column;
+            width: 240px;
+
+            & > * {
+                font-size: 18px;
+                text-align: start;
+                margin-left: 5px;
+                margin-bottom: 5px;
+                padding: 3px 0 3px 23px;
+                color: #555;
+                border-left: 5px solid #555;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 35px;
+
+            }
+
+            &.stick {
+                position: fixed;
+                top: 78px;
+                left: 1020.40625px;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .blog_all_items_overview {
+        .blog_all_items_overview_right_section {
+            .blog_all_items_overview_right_section_articles_amount_container {
+                &.stick {
+                    left: 870px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .blog_all_items_overview {
+        .blog_all_items_overview_right_section {
+            .blog_all_items_overview_right_section_articles_amount_container {
+                &.stick {
+                    left: 800px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .blog_all_items_overview {
+        width: 100%;
+        grid-template-columns: 1fr;
+        .blog_all_items_overview_right_section {
+            .blog_all_items_overview_right_section_articles_amount_container {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .blog_all_items_overview {
+        padding: 0;
+        margin: 0;
+
+        .blog_all_items_overview_container {
+            width: 300px;
+        }
+    }
+}

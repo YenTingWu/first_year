@@ -1,0 +1,15 @@
+.story_page_category_selector {
+    padding: 3px 5px;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 3px 5px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+@media screen and (max-width: 800px) {
+    .story_page_category_selector {
+        margin: 10px 5px;
+    }
+}

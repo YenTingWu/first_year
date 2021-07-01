@@ -1,0 +1,27 @@
+.blog_preview {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .occupation {
+        min-height: 90%; 
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .blog_preview {
+
+        .occupation {
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.blog_content_page_main_section_sidebar {
+    position: fixed;
+    display: flex;
+    color: #ddd;
+    height: 50px;
+    top: 50vh;
+    left: 20px;
+    transform: translate(-90%, -50%);
+    z-index: 100000;
+    overflow: hidden;
+
+    .blog_content_page_main_section_sidebar_options {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 0;
+
+        li {
+            padding: 8px 5px;
+            font-size: 20px;
+            width: 400px;
+            cursor: pointer; 
+
+            &:hover {
+                background-color: #ccc;
+                color: #555555;
+            }
+        }
+    }
+
+    #hand-icon {
+        box-sizing: unset;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        transform: translate(-20%, -50%);
+        background-color: rgba(89, 147, 165, .9); 
+        height: 100vh;
+        transition: transform .3s ease;
+        padding-top: 100px;
+
+        .blog_content_page_main_section_sidebar_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+
+            .blog_content_page_main_section_sidebar_options {
+                overflow: scroll;
+                height: 350px;
+                background-color: rgba(65, 107, 119, 0.9);
+                
+                li {
+                    padding: 11px 5px;
+                }
+            }
+            img { 
+                margin-right: 30px;
+                border-radius: 4px;
+                padding: 10px;
+
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+        }   
+        #hand-icon {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .blog_content_page_main_section_sidebar {
+        left: 15px;
+        .blog_content_page_main_section_sidebar_options {
+    
+            li {
+                padding: 8px 5px;
+                font-size: 20px;
+                width: 300px;
+            }
+        }
+        #hand-icon {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .blog_content_page_main_section_sidebar {
+        left: 13px;
+        .blog_content_page_main_section_sidebar_options {
+    
+            li {
+                padding: 3px 2px;
+                font-size: 14px;
+                width: 200px;
+            }
+        }
+        #hand-icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

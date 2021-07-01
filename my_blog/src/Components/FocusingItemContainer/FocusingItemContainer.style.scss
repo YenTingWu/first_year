@@ -1,0 +1,109 @@
+@import '../../variable.styles.scss';
+
+.focusing_item_container {
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    border-radius: 10px;
+    border: 3px solid #444;
+    z-index: 10;
+    cursor: pointer;
+    overflow: hidden;
+
+    .shaping_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+
+        
+        .inside_item_container {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex: 1 1 auto;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: rgba(0, 0, 0, .8);
+                opacity: .1;
+                width: 100%;
+                height: 100%;    
+            }        
+        }
+
+        .focusing_item_name_container {
+            position: absolute;
+    
+            h1 {
+                font-size: 21px;
+                font-weight: 900;
+                margin: 0;
+                color: #fff;
+                z-index: 100;
+                filter: brightness(150%);
+                transition: .2s transform ease;
+            }
+        }
+    }
+
+    &:hover {
+        .inside_item_container {
+            transform: scale(1.1);
+            transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+            &::after {
+                transition: opacity 1s ease;  
+                opacity: .6;
+            }
+        }
+
+        .focusing_item_name_container {
+            h1 {
+                color: #aaa;
+                transform: scale(1.02);
+            }
+        }
+        
+    } 
+}
+
+@media screen and (max-width: 765px) {
+    .focusing_item_container {
+        width: 120px;
+        height: 120px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0px;
+        position: relative;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    .focusing_item_container {
+        width: 85px;
+        height: 85px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0px;
+        position: relative;
+
+        .shaping_container {
+            .focusing_item_name_container {
+                h1 {
+                    font-size: 10px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

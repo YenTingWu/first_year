@@ -1,0 +1,79 @@
+.signin_page_container_form_input_container {
+    padding: 10px 8px;
+    position: relative;
+    margin-bottom: 20px;
+    color: #555;
+
+    .signin_page_container_form_input_label {
+        font-size: 18px;
+        font-weight: 100;
+        position: absolute;
+        bottom: 13px;
+        left: 20px;
+        letter-spacing: 1.3px;
+        pointer-events: none;
+        transition: all .2s ease-in-out;
+
+        &.shrink {
+            bottom: 50px;
+            left: 12px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .signin_page_container_form_input {
+        width: 250px;
+        padding: 6px;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 2px;
+        letter-spacing: 1.2px;
+        border-radius: 3px;
+        border: none;
+
+        &:focus ~ .signin_page_container_form_input_label{
+            bottom: 50px;
+            left: 12px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .signin_page_container_form_input_container {
+        margin-bottom: 10px;
+
+        .signin_page_container_form_input_label {
+            font-size: 16px;
+            bottom: 12px;
+            left: 16px;
+    
+            &.shrink {
+                bottom: 48px;
+                left: 12px;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .signin_page_container_form_input {
+            width: 200px;
+            font-size: 16px;
+            padding: 5px;
+            line-height: 0px;
+
+            &:focus ~ .signin_page_container_form_input_label{
+                bottom: 44px;
+                left: 12px;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+
+            &:nth-child(1) {
+                margin-top: 10px;
+            }
+        }
+    }
+}
