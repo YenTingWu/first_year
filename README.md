@@ -1,1 +1,1 @@
-## A repo to store my projects in the first-programming year
+## A repo for my projects in the first-programming year
